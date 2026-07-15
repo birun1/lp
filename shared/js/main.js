@@ -111,7 +111,15 @@
     const confirmButton = byId('whatsappConfirmation');
     if (!confirmButton) return;
     const whatsappNumber = normalizeWhatsAppNumber(config.whatsappNumber);
-    const message = `Halo Biruni, saya ${name} dengan kode registrasi ${code}. Saya ingin melakukan konfirmasi pendaftaran ${config.eventName || 'event Biruni'}.`;
+    const message = [
+      'Halo Biruni,',
+      '',
+      `Nama: *${name}*`,
+      `Kode registrasi: *${code}*`,
+      `Event: ${config.eventName || 'Event Biruni'}`,
+      '',
+      'Saya ingin melakukan konfirmasi pendaftaran.'
+    ].join('\n');
     confirmButton.href = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}` : '#';
   }
 

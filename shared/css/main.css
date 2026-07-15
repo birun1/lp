@@ -127,7 +127,7 @@ h2{font-size:clamp(36px,4vw,56px);letter-spacing:-.045em;margin-bottom:18px}
 .form-head small{color:#0b53d3;font-weight:800}
 .form-head h3{font-size:27px;margin:4px 0}
 .form-card label{display:block;font-size:12px;font-weight:800;margin-bottom:14px}
-.form-card input,.form-card select{width:100%;border:1px solid #dfe5ef;background:#f8faff;border-radius:13px;padding:14px;margin-top:7px;font:inherit;outline:none}
+.form-card input,.form-card select{width:100%;min-height:52px;border:1px solid #dfe5ef;background:#f8faff;border-radius:13px;padding:14px;margin-top:7px;font:inherit;outline:none}
 .form-card input:focus,.form-card select:focus{border-color:#3f7cf2;box-shadow:0 0 0 4px rgba(63,124,242,.12)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .privacy{font-size:10px!important;text-align:center;color:#8a93a8!important;margin:12px 0 0}
@@ -219,3 +219,10 @@ body{padding-bottom:75px}
 .btn-whatsapp{background:#20c979;color:#042d1d;box-shadow:0 10px 24px rgba(32,201,121,.24)}
 .back-link{display:inline-block;margin-top:20px;color:#0a52ce;font-size:13px;font-weight:800}
 @media(max-width:620px){.thanks-page{padding:90px 0 40px}.thanks-card{padding:30px 20px}.registration-detail{grid-template-columns:1fr}}
+
+/* Keep the decorative hero shape aligned behind the mobile headline. */
+@media(max-width:620px){
+  .hero{background:radial-gradient(circle at 20% 34%,rgba(78,140,255,.17),transparent 30%),linear-gradient(180deg,#f7f9ff 0%,#eef4ff 100%)}
+  .hero-copy{position:relative;z-index:1}
+  .glow-a{top:220px}
+}
