@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Tryout TKA SMA 2026 GRATIS dari Biruni. Simulasi online, analisis hasil, ranking peserta, dan hadiah untuk peserta terbaik." />
+  <link rel="icon" href="data:," />
   <title>Tryout TKA SMA 2026 GRATIS | Biruni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../shared/css/main.css" />
 </head>
 <body>
   <div class="progress" id="progress"></div>
@@ -32,7 +33,7 @@
       <div class="glow glow-b"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="pulse"></span> GRATIS • KUOTA 250 PESERTA</div>
+          <div class="eyebrow"><span class="pulse"></span> GRATIS • KUOTA <span data-config="quota">250</span> PESERTA</div>
           <h1>TKA Sudah Dekat.<br><span>Kamu Yakin Sudah Siap?</span></h1>
           <p class="hero-lead">Ukur kemampuanmu sebelum ujian sebenarnya melalui simulasi Tryout TKA SMA 2026 yang bisa dikerjakan secara online dari rumah.</p>
           <div class="hero-points">
@@ -47,7 +48,7 @@
           </div>
           <div class="scarcity">
             <div class="avatar-stack"><i></i><i></i><i></i><i></i></div>
-            <div><strong id="registeredCount">187 siswa</strong> sudah bergabung<br><small>Pendaftaran ditutup 15 Juli 2026</small></div>
+            <div><strong id="registeredCount">187 siswa</strong> sudah bergabung<br><small>Pendaftaran ditutup <span data-config="registrationCloseDate">15 Juli 2026</span></small></div>
           </div>
         </div>
 
@@ -69,8 +70,8 @@
       <div class="container trust-grid">
         <div><strong>100%</strong><span>Gratis</span></div>
         <div><strong>Online</strong><span>Bisa dari rumah</span></div>
-        <div><strong>17–18 Jul</strong><span>Pelaksanaan</span></div>
-        <div><strong>250</strong><span>Kuota terbatas</span></div>
+        <div><strong data-config="trustExecutionDate">17–18 Jul</strong><span>Pelaksanaan</span></div>
+        <div><strong data-config="quota">250</strong><span>Kuota terbatas</span></div>
       </div>
     </section>
 
@@ -148,10 +149,10 @@
           <p class="section-lead">Selesaikan pendaftaran sebelum kuota penuh atau periode pendaftaran ditutup.</p>
         </div>
         <div class="timeline reveal">
-          <article class="active"><b>01</b><small>6–15 Juli</small><h3>Pendaftaran</h3></article>
+          <article class="active"><b>01</b><small data-config="registrationDateShort">6–15 Juli</small><h3>Pendaftaran</h3></article>
           <article><b>02</b><small>16–17 Juli</small><h3>Pengiriman Akses</h3></article>
           <article><b>03</b><small>17 Juli</small><h3>Penjelasan Teknis</h3><p>16.30–17.00 WIB</p></article>
-          <article><b>04</b><small>17–18 Juli</small><h3>Pelaksanaan</h3></article>
+          <article><b>04</b><small data-config="executionDateShort">17–18 Juli</small><h3>Pelaksanaan</h3></article>
           <article><b>05</b><small>21 Juli</small><h3>Pengumuman</h3></article>
         </div>
         <div class="center cta-space"><a class="btn btn-primary btn-lg" href="#registration">Daftar Sekarang</a></div>
@@ -218,13 +219,13 @@
             <li>Simulasi TKA Online</li>
             <li>Analisis hasil dan ranking</li>
             <li>Hadiah peserta terbaik</li>
-            <li>Pelaksanaan 17–18 Juli 2026</li>
+            <li>Pelaksanaan <span data-config="executionDate">17–18 Juli 2026</span></li>
           </ul>
         </div>
         <form class="form-card reveal delay-1" id="registrationForm">
           <div class="form-head">
             <small>FORM PENDAFTARAN</small>
-            <h3>Tryout TKA SMA 2026</h3>
+            <h3 data-config="eventName">Tryout TKA SMA 2026</h3>
           </div>
           <label>Nama lengkap<input required name="name" type="text" placeholder="Masukkan nama lengkap" /></label>
           <label>Asal sekolah<input required name="school" type="text" placeholder="Contoh: SMAN 1 Tangerang" /></label>
@@ -250,10 +251,11 @@
   </footer>
 
   <div class="sticky-mobile">
-    <div><small>100% GRATIS</small><strong>Kuota 250 peserta</strong></div>
+    <div><small>100% GRATIS</small><strong>Kuota <span data-config="quota">250</span> peserta</strong></div>
     <a class="btn btn-primary" href="#registration">Daftar Sekarang</a>
   </div>
 
-  <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="../shared/js/main.js"></script>
 </body>
 </html>
